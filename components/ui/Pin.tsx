@@ -36,7 +36,10 @@ export const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      onClick={()=> open(href, '_blank').focus()}
+      onClick={() => {
+        const newWindow = open(href, '_blank');
+        newWindow?.focus();
+      }}
     >
       <div
         style={{
