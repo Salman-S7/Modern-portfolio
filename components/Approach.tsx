@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -106,6 +107,7 @@ const Card = ({
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="h-full w-full absolute inset-0"
           >
             {children}
