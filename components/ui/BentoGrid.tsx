@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
@@ -7,7 +8,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import { cn } from "@/utils/cn";
 
 
-// import { BackgroundGradientAnimation } from "./GradientBg";
+import { BackgroundGradientAnimation } from "./GradientBg";
 // import GridGlobe from "./GridGlobe";
 // import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
@@ -60,14 +61,14 @@ export const BentoGridItem = ({
   const defaultOptions = {
     loop: copied,
     autoplay: copied,
-    animationData: animationData,
+    // animationData: animationData,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "salmanshaikh3747@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -137,7 +138,7 @@ export const BentoGridItem = ({
           </div>
 
           {/* for the github 3d globe */}
-          {id === 2 && <GridGlobe />}
+          {/* {id === 2 && <GridGlobe />} */}
 
           {/* Tech stack list div */}
           {id === 3 && (
@@ -180,7 +181,7 @@ export const BentoGridItem = ({
                   }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
               </div>
 
               <MagicButton
