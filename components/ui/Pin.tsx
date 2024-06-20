@@ -36,6 +36,7 @@ export const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      onClick={()=> open(href, '_blank').focus()}
     >
       <div
         style={{
@@ -65,7 +66,7 @@ export const PinPerspective = ({
 }: {
   title?: string;
   href?: string;
-}) => {
+  }) => {
   return (
     // change w-96 to w-full
     <motion.div className="pointer-events-none w-full h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
